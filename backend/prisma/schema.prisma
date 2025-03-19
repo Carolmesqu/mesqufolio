@@ -9,6 +9,7 @@ datasource db {
   directUrl = env("DIRECT_URL")  
 }
 
+//pasta do back > rodar as migrações npx prisma migrate dev
 model Tecnologia {
   id          Int      @id @default(autoincrement())
   nome        String
@@ -18,4 +19,16 @@ model Tecnologia {
 
   @@map("tecnologias")
 } 
-//rodar as migrações npx prisma migrate dev
+
+model Projeto {
+  id          Int      @id @default(autoincrement())
+  nome        String
+  descricao   String
+  imagens     String[]
+  nivel       Int
+  tipo        String
+  destaque    Boolean @default(false)
+  repositorio String
+
+  @@map("projetos")
+}
