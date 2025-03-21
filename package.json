@@ -1,0 +1,13 @@
+{
+  "name": "carolmesqu-portfolio",
+  "version": "1.0.0",
+  "description": "Este é um projeto em desenvolvimento baseado no curso **Portfólio Full Stack + Agentes de IA** da Cod3r. O objetivo é criar um portfólio dinâmico que integra tecnologias modernas de desenvolvimento web com agentes de inteligência artificial.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx concurrently \"cd backend && npm run start:dev\" \"cd frontend && npm run dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
