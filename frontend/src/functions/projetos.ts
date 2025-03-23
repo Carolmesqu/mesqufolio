@@ -15,7 +15,7 @@ export async function obterProjetos() {
         get jogos() {
             return projetos.filter((projetos) => projetos.tipo === Tipo.JOGO)
         },
-        get destaque() {
+        get destaques() {
             return projetos.filter((projetos) => projetos.destaque === true)
         },
     }

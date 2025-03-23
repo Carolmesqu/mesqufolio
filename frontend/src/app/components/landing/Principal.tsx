@@ -1,6 +1,6 @@
 import { Tecnologia } from "@core";
 import Cabecalho from "../shared/Cabecalho"
-import Tecnologias from "../tecnologias/tecnologias";
+import Tecnologias from "../tecnologias/Tecnologias";
 
 export interface PrincipalProps {
   tecnologias: Tecnologia[];
@@ -13,7 +13,7 @@ export default function Principal(props: PrincipalProps) {
         bg-[url('/principal.jpg')] bg-cover bg-center
     ">
         <Cabecalho/>
-        <div className="flex-1 flex flex-col justify-center items-center gap-5">
+        <div className="flex-1 flex w-full flex-col justify-center items-center gap-5">
           <div className="flex flex-col items-center gap-1">
             <h1 className="flex gap-3 items-center">
                 <span   className="w-2 h-2 roundend-full"
