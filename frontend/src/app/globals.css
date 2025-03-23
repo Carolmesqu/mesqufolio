@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import "tw-animate-css";
 
+@plugin "@tailwindcss/typography";
+
 @custom-variant dark (&:is(.dark *));
 
 body {
@@ -96,4 +98,12 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+[data-badges] {
+  @apply flex flex-row flex-wrap justify-center gap-2 p-1;
+}
+
+[data-badges] > img {
+  @apply m-0;
 }
