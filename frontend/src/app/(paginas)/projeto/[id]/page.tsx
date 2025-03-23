@@ -1,11 +1,16 @@
 import Cabecalho from "@/app/components/shared/Cabecalho";
+import Container from "@/app/components/shared/Container";
+import { obterProjeto } from "@/functions/projetos";
 
 export default async function PaginaProjeto(props: { params: Promise<{ id: string }> }) {
-    const { id } = await props.params 
-    return <div className="bg-black">
+    const { id } = await props.params;
+    const projeto = await obterProjeto(id);
+    return projeto ? (
+        <div className="bg-black">
             <Cabecalho />
-            <div>
-                <h1>Projeto {id}</h1>
-            </div>         
+            <Container className="py-7 flex flex-col gap-10">
+                <h1 className="text-3xl font-bold">{projeto.nome}</h1>
+            </Container>         
         </div>
+    ) : null
 }
