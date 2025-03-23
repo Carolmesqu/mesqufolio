@@ -1,8 +1,9 @@
-import Cabecalho from "../components/shared/Cabecalho";
-import Container from "../components/shared/Container";
+import Principal from "../components/landing/Principal";
 
 export default function Home() {
   return (
-    <Cabecalho />
+    <div>
+      <Principal/>   
+    </div>
   );
 }

@@ -8,6 +8,7 @@ body {
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --cor-principal: #3CB371;
 }
 
 @theme inline {

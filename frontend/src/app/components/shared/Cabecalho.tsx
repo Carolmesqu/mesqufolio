@@ -5,7 +5,7 @@ import Menu from "./Menu";
 
 export default function Cabecalho() { 
     return (
-        <header className="flex items-center h-16">
+        <header className="w-full flex items-center h-16 bg-black/50">
             <Container className="flex-1 flex justify-between items-center">
                 <div className="flex items-center gap-10">
                     <Link href="/" className="hidden sm:block">
@@ -17,7 +17,8 @@ export default function Cabecalho() {
                     <Link 
                         href='https://www.linkedin.com/in/carolmesqu/'
                         target="_blank"
-                        className="bg-green-500 rounded-full px-7 py-1 text-sm font-bold"
+                        className="rounded-full px-7 py-1 text-sm font-bold"
+                        style={{ backgroundColor: "var(--cor-principal)" }}
                     >
                         Perfil
                     </Link>

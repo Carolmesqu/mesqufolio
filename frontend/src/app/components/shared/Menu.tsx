@@ -24,9 +24,12 @@ function MenuItem(props: {
     return (        
         <Link href={props.href} target={props.novaAba ? "_blank" : "_self"}>
             <span className={`
-                flex item-center gap-2 text-sm border-green-600 hover:text-gray-400
+                flex item-center gap-2 text-sm hover:text-gray-400
                 ${props.selecionado ? "border-b-4 text-write" : "text-zinc-300"}
-            `}>{props.children}</span>
+            `}
+                style={{                    
+                    borderColor: "var(--cor-principal)"
+                }}>{props.children}</span>
         </Link>
     )
 }
