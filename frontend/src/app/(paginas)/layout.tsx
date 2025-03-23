@@ -1,5 +1,3 @@
-import BotaoChat from "../components/chat/BotaoChat";
-
 export default function Layout(props: { children: React.ReactNode }) {
     return (
         <div>
@@ -9,3 +7,4 @@ export default function Layout(props: { children: React.ReactNode }) {
 }
 
 //  <BotaoChat/>
+// import BotaoChat from "../components/chat/BotaoChat";
