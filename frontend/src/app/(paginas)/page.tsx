@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <div>
-      <Principal/>
+      <Principal tecnologias={tecnologias.destaques}/>
       <Container className="py-16">
         <Curriculo tecnologias={tecnologias.todas}/>
       </Container>
