@@ -9,7 +9,7 @@ export default function Menu() {
     return (
         <nav className="flex gap-6">
             <MenuItem href="/" selecionado={caminho === "/"}>Início</MenuItem>
-            <MenuItem href="/projeto/1" selecionado={caminho === "/projeto"}>Projetos</MenuItem>
+            <MenuItem href="/projeto/1" selecionado={caminho.startsWith("/projeto")}>Projetos</MenuItem>
             <MenuItem href="https://api.whatsapp.com/send/?phone=5521988171853&text&type=phone_number" selecionado={false} novaAba={true}>Contato</MenuItem>
         </nav>
     )
