@@ -1,6 +1,7 @@
 import Cabecalho from "@/app/components/shared/Cabecalho";
 import CarrosselImagens from "@/app/components/shared/CarrosselImagens";
 import Container from "@/app/components/shared/Container";
+import Tecnologias from "@/app/components/tecnologias/Tecnologias";
 import { obterProjeto } from "@/functions/projetos";
 
 export default async function PaginaProjeto(props: { params: Promise<{ id: string }> }) {
@@ -9,11 +10,10 @@ export default async function PaginaProjeto(props: { params: Promise<{ id: strin
     return projeto ? (
         <div className="bg-black">
             <Cabecalho />
-            <Container className="py-7 flex flex-col gap-10">
-                <h1 className="text-3xl font-bold">{projeto.nome}</h1>
-                <div className="flex flex-col items-center">
-                    <CarrosselImagens imagens={projeto.imagens.slice(1)}/>
-                </div>
+            <Container className="py-7 flex flex-col items-center gap-10">
+                <h1 className="text-3xl font-bold self-start">{projeto.nome}</h1>           
+                <CarrosselImagens imagens={projeto.imagens.slice(1)}/>
+                <Tecnologias lista={projeto.tecnologias} tamanhoMenor/>
             </Container>         
         </div>
     ) : null
